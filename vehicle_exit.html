@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Exit</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>🚗 Parking Billing System</h1>
+    </header>
+    <div class="container">
+        <div class="welcome">
+            <h2>Vehicle Exit</h2>
+            <p>Enter the vehicle number to record exit.</p>
+            <form method="POST" action="/vehicle-exit">
+                <label>Vehicle Number</label>
+                <br>
+                <input type="text" name="vehicle_number" placeholder="Example: KA01AB1234" required>
+                <br><br>
+                <button type="submit" class="btn">
+                    Record Exit
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

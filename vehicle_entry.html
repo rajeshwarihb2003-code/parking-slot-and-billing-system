@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vehicle Entry</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>🚗 Parking Billing System</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="welcome">
+
+            <h2>Vehicle Entry</h2>
+            <p>Enter the vehicle details below.</p>
+<form method="POST" action="/vehicle-entry">
+
+    <label>Vehicle Number</label>
+    <br>
+
+    <input type="text" name="vehicle_number" placeholder="Example: KA01AB1234" required>
+    <br><br>
+    <label>Vehicle Type</label>
+    <br>
+    <select name="vehicle_type">
+        <option value="Car">Car</option>
+        <option value="Bike">Bike</option>
+        <option value="Auto">Auto</option>
+        <option value="Other">Other</option>
+    </select>
+
+    <br><br>
+
+    <label>Owner Name</label>
+    <br>
+
+    <input type="text"
+           name="owner_name"
+           placeholder="Enter owner name"
+           required>
+
+    <br><br>
+
+    <button type="submit" class="btn">
+        Register Vehicle
+    </button>
+
+</form>
+           
+             
+        </div>
+    </div>
+</body>
+</html>
